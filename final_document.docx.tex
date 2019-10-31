@@ -1,0 +1,657 @@
+%%%%%%%%%%%%  Generated using docx2latex.com  %%%%%%%%%%%%%%
+
+%%%%%%%%%%%%  v2.0.0-beta  %%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=0.5in,right=0.5in,top=0.5in,bottom=0.5in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,6.5in,7.0in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+\setlength{\topsep}{0pt}\setlength{\parskip}{8.04pt}
+\setlength{\parindent}{0pt}
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+%%%%%%%%%%%%%%%%%%%% Document code starts here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\begin{Center}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Evaluating caches through multiple caching techniques}\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{14pt}{16.8pt}\selectfont Submitted to: \tab Satish Kumar Peddoju\par}\par
+
+{\fontsize{14pt}{16.8pt}\selectfont Submitted by: \tab Maninder Singh\tab (18114047)\par}\par
+
+\begin{adjustwidth}{1.0in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Nishant Jain\tab \tab (18114052)\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{1.0in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Rhythm Gothwal\tab (18114065)\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{1.0in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Ujjwal Bagrania\tab (18114078)\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{1.0in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Chinmaya Chawla\tab (18114025)\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{1.0in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Prakarsh Singh\tab (18114061)\par}\par
+
+\end{adjustwidth}
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{DESCRIPTION:}\par}\par
+
+ Current data cache organizations fail to deliver high performance in scalar processors for many vector applications. There are two main reasons for this loss of performance: the use of the same organization for caching both spatial and temporal locality and the $``$eager$"$  caching policy used by caches. The first issue has led to the well-known trade-off of designing caches with a line size of a few tens of bytes. However, for memory reference patterns with low spatial locality a significant pollution is introduced. On the other hand, when the spatial locality is very high, larger lines could be more convenient. The eager caching policy refers to the fact that data that miss in the cache and is required by the processor is always cached (excepting writes in a no write allocate cache). However, it is common in numerical applications to have large working sets (large vectors, larger than the cache size), that result on a swept of the cache without any opportunity to exploit temporal locality. In addition, they replace some other data that may be required later. In this project we look at and compare all the caching types and discuss their benefits and losses and also discuss alternative caching strategies overcoming aforementioned disadvantages.\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{MOTIVATION :}\par}\par
+
+We\ studied\ about\ caches in our course structure and came to know about their working and their importance in reducing the access time to  memory . We were willing to find out what happens when we use or work with very large data sets when  we learnt about how cache exploits spatial and temporal locality . It is interesting to know  how different kinds of caching techniques solve the problem for performance in vector applications , how different data caching techniques exploit spatial as well as temporal locality to reduce access time as well as to increase hit/miss ratio .\par
+
+The topic is important as it helps in spatial locality detection and optimisation and it also throws some light on working of locality prediction table . we have also worked on evaluating their performances on different benchmarks which are currently being used .\par
+
+\setlength{\parskip}{0.0pt}
+Also currently there is no proposal to solve the four major issues - large\par
+
+working sets, strides different to one, interferences and prefetching{\fontsize{9pt}{10.8pt}\selectfont  \par}. In this paper, we present a novel cache organization that incorporates some features to exploit the characteristics of vector as well as scalar data. In particular, our cache organization tries to avoid the swept effect of large vectors, reduces the pollution caused by non unit strides, decreases the penalty caused by self-interferences due to strides coprime with the\par
+
+number of lines, and can take advantage of prefetching of vector elements\par
+
+{\fontsize{14pt}{16.8pt}\selectfont \textbf{Related Work}\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont The poor performance of current data cache organizations for dealing with vector data is mainly due to\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont the following reasons:\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 1. Large working sets.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 2. Pollution due to non-unit strides.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 3. Interferences when the stride and the number of sets are not coprime.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 4. Prefetching.\par}\par
+
+❏ Block algorithms is a technique that tries to reduce the negative effect of large working\par
+
+sets. Block algorithms can be developed by the programmer or, as claimed by several\par
+
+authors.\par
+
+❏ The pollution caused by non-unit strides can be avoided in some cases by means of\par
+
+copying . The main idea of this technique is to copy the elements of non-unit stride\par
+
+vectors into auxiliary vectors with stride one and then performing all the operations\par
+
+using the latter vectors.\par
+
+❏ Many proposals to reduce the negative effect of interferences have recently appeared.\par
+
+Some of the most representative are: the victim cache , the Skewed-associative cache , the\par
+
+Column-associative cache , the Half-and-Half cache.\par
+
+❏ Software prefetching techniques are managed by the compiler and usually make use of\par
+
+non-blocking caches in order to issue memory requests in advance. Hardware\par
+
+techniques for prefetching vector data require some mechanism to recognize references\par
+
+to vector data. A combination of both has also been proposed in few literatures.\par
+
+{\fontsize{16pt}{19.2pt}\selectfont Runtime spatial locality detection :\par}\par
+
+To facilitate spatial locality tracking, a spatial counter, or sctr, is included in each MAT entry. The role of the sctr is to track the medium to long-term spatial locality of the corresponding macroblock, and to make fetch size decisions .{\fontsize{1pt}{1.2pt}\selectfont  \par}If the cache is not fully-associative, the tags for different blocks residing in the same larger fetch size block will lie in consecutive sets. Searching for other cache blocks in the same larger fetch size block of data will re-\par
+
+quire access to the tags in these consecutive sets, and thus either additional cycles to access, or additional hardware\par
+
+support.{\fontsize{1pt}{1.2pt}\selectfont  \par}a separate structure can be used to detect this information, which is the approach investigated in this work.\par
+
+This structure is called the Spatial Locality Detection Table (SLDT), and is designed for e\_cient detection of spatial\par
+
+reuses with low hardware overhead. The role of the SLDT is to detect spatial locality of data while it is in the cache,\par
+
+for recording in the MAT when the data is displaced. The SLDT is basically a tag array for blocks of the larger fetch\par
+
+size, allowing single-cycle access to the necessary information.\par
+
+
+\vspace{\baselineskip}
+\textbf{REFERENCES}\par
+
+1. M.S. Lam, E.E. Rothberg and M.E. Wolf, The Cache Performance and\par
+
+Optimization of Blocked Algorithms in Proc. of ASPLOS 1991, pp. 67-74, 1991.\par
+
+2. O. Temam, E.D. Granston, W. Jalby, To Copy or not to Copy: A Compile-time\par
+
+Technique for Assessing when Data Copying Should be Used to Eliminate Cache\par
+
+Conflicts, in Proc. of Supercomputing’93 Conference, pp. 410-419, 1993.\par
+
+3. T-F. Chen and J-L. Baer, A Performance Study of Software and Hardware Data\par
+
+Prefetching Schemes, in Proc of the 21th. Int. Symp. Comp. Architecture, pp.\par
+
+223-232, 1994.\par
+
+4. G. Kurpanek et al. PA7200: A PA-RISC Processor with Integrated High\par
+
+\par 
+ \begin{tikzpicture}
+
+\path (5.5in,-1.39in) node [shape=rectangle,draw,minimum height=2.75in,minimum width=3.25in,text width=2.93in,align=center]{memory request from CPU};
+Performance MP Bus Interface in Proc. of CompCon94, pp. 375-382, 1994.
+\end{tikzpicture}
+\setlength{\parskip}{8.04pt}
+{\fontsize{9pt}{10.8pt}\selectfont \textit{2}\par}\par
+
+ {\fontsize{16pt}{19.2pt}\selectfont \textbf{Methods :}\par}\par
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Dual data cache }\par}\par
+
+\end{adjustwidth}
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont The proposed data cache, which is called \textit{dual data cache},\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont consists of two independent memories, or subcaches. One is called\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont the \textit{spatial cache }because it is designed to exploit spatial locality, in\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont addition to temporal locality. The other is called \textit{temporal cache}\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont since it is targeted to exploit just temporal locality. Both subcaches\par}\par
+
+\setlength{\parskip}{8.04pt}
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{10pt}{12.0pt}\selectfont work independently and in parallel.\par}\par
+
+\end{adjustwidth}
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont When the processor issues a memory reference, both caches\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont are looked up at the same time and, depending on the result, one of\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont the following actions is taken:\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont $\bullet$  If the required data is only in one of the subcaches, the data\par}\par
+
+\setlength{\parskip}{8.04pt}
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{10pt}{12.0pt}\selectfont is read or written in that subcache. This is a cache hit .\par}\par
+
+\end{adjustwidth}
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont If the required data is found in both subcaches, it is read\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont from the temporal cache or written into both two in parallel. \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont This is again a cache hit.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont $\bullet$  If the required data is not in any subcache, a cache miss occurs. In this case, the processor is stalled and the required\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont data\ is\ brought\ from\ the\ next\ level\ of\ the\ memory\ hierarchy.\ \ \ \ \ \ \ \ \ \ \            \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont This data may be placed in just one of the two subcaches or may be not cached anywhere, depending on predicted type of locality for this memory access. The predicted locality for a memory reference is based on guessing whether the accessed data is an scalar, or an element of a vector, and in the latter case, it also depends on the stride and the size of the vector. These attributes are estimated by means of the locality prediction table. For every cache miss, the locality prediction table decides where the missed data is cached. The locality prediction table is accessed at the same time as the cache memory.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  The locality prediction table is managed as a cache. It may be direct mapped, set associative or fully associative. Every time a load/store instruction is executed, the locality prediction table is looked up.\par}\par
+
+
+\vspace{\baselineskip}
+\setlength{\parskip}{8.04pt}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Selective caching }\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont a selective cache behaves as a conventional cache with a selective caching policy .the caching scheme used is cache bypassing . The locality prediction table behaves in the same way with the difference that now, there is not distinction between spatial and temporal caches. In this profiling is done in order to identify heavily used basic blocks.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont The basic block usage frequencies are classified to high, medium and low usage. Based on input compiler marks HU instructions cacheable to level 1,MU to level; 2 and LU to level 3.this is done so that heavily used code is cached and less used is bypassed to processor .\par} {\fontsize{10pt}{12.0pt}\selectfont Based on the profile input, the compiler marks HU instructions as cacheable to level 1, MU instructions as cacheable to level 2, LU instructions cacheable to level 3 etc. The essence of the technique is to allow only heavy usage sections of the code to be cached and to bypass rarely used code directly to the instruction register or data registers.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont The used technique emphasises temporal locality, however it does not ignore spatial locality. Use of large block sizes can help to exploit spatial locality in frequently used sections of code or data. Non-caching of rarely used items will mean that spatial locality in them cannot be exploited.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont Consider a case where two elements A and B within a single loop compete for space in cache. If the loop is executed ten times the memory access pattern may be represented as (AB)10, where 10 denotes frequency of usage of particular instruction. If we allow both elements to enter the cache, each instruction will knock each other out of the cache and neither hits. Hence behaviour of conventional cache is \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  (A\textsubscript{m}B\textsubscript{m})\textsuperscript{10}\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont where m is a miss and h is a hit. Hence miss rate for conventional cache is 100$\%$ . Instead of allowing every element to enter the cache, let us keep one element say A. The behaviour of bypassing or selective cache is \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  A\textsubscript{m}B\textsubscript{m}(A\textsubscript{h}B\textsubscript{m})\textsuperscript{9}\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont and the miss rate is 55$\%$ .\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Performance evaluation for dual data and selective caching}\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont Three different kinds of benchmarks have been used :\par}\par
+
+{\fontsize{14pt}{16.8pt}\selectfont 1. synthetic benchmarks :{\fontsize{16pt}{19.2pt}\selectfont  \par}\par}The synthetic benchmarks consist of a set of loops that deal with vectors of different size and stride. Each loop makes use of either one or two vectors and traverse it/them ten times incrementing every element at each iteration.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.18in}p{0.28in}p{0.18in}p{0.11in}p{0.19in}p{0.11in}p{0.19in}p{0.19in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{0.18in}}{\Centering {\fontsize{7pt}{8.4pt}\selectfont \textbf{Bench.}}} & 
+\multicolumn{1}{|p{0.28in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{Length}}} & 
+\multicolumn{1}{|p{0.18in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{Stride}}} & 
+\multicolumn{1}{|p{0.11in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{S-Loc}}} & 
+\multicolumn{1}{|p{0.19in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{T-Loc}}} & 
+\multicolumn{1}{|p{0.11in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{SS-Loc}}} & 
+\multicolumn{1}{|p{0.19in}}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{TS-Loc}}} & 
+\multicolumn{1}{|p{0.19in}|}{{\fontsize{7pt}{8.4pt}\selectfont \textbf{TT-Loc}}} \\
+\hhline{--------}
+%row no:2
+\multicolumn{1}{|p{0.18in}}{\Centering v1} & 
+\multicolumn{1}{|p{0.28in}}{2000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 1} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{100} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{100} & 
+\multicolumn{1}{|p{0.19in}|}{\Centering -} \\
+\hhline{--------}
+%row no:3
+\multicolumn{1}{|p{0.18in}}{\Centering  v2} & 
+\multicolumn{1}{|p{0.28in}}{4000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 1} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{100} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{\Centering 2} & 
+\multicolumn{1}{|p{0.19in}|}{\Centering -} \\
+\hhline{--------}
+%row no:4
+\multicolumn{1}{|p{0.18in}}{\Centering v3} & 
+\multicolumn{1}{|p{0.28in}}{15000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 1} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 3/4} & 
+\multicolumn{1}{|p{0.19in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.19in}|}{\Centering -} \\
+\hhline{--------}
+%row no:5
+\multicolumn{1}{|p{0.18in}}{\Centering v4} & 
+\multicolumn{1}{|p{0.28in}}{1000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 5} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.19in}}{100} & 
+\multicolumn{1}{|p{0.11in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}|}{100} \\
+\hhline{--------}
+%row no:6
+\multicolumn{1}{|p{0.18in}}{\Centering v5} & 
+\multicolumn{1}{|p{0.28in}}{1000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 15} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.19in}}{\Centering 13} & 
+\multicolumn{1}{|p{0.11in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}|}{100} \\
+\hhline{--------}
+%row no:7
+\multicolumn{1}{|p{0.18in}}{\Centering v6} & 
+\multicolumn{1}{|p{0.28in}}{2500} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 6} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.19in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.11in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}|}{\Centering 0} \\
+\hhline{--------}
+%row no:8
+\multicolumn{1}{|p{0.18in}}{\Centering v7} & 
+\multicolumn{1}{|p{0.28in}}{1000} & 
+\multicolumn{1}{|p{0.18in}}{\Centering 12} & 
+\multicolumn{1}{|p{0.11in}}{\Centering 0} & 
+\multicolumn{1}{|p{0.19in}}{100} & 
+\multicolumn{1}{|p{0.11in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}}{\Centering -} & 
+\multicolumn{1}{|p{0.19in}|}{\Centering 0} \\
+\hhline{--------}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+{\fontsize{10pt}{12.0pt}\selectfont For 32 kbyte cache \par}\par
+
+
+\vspace{\baselineskip}
+2. kernels\par
+
+\begin{adjustwidth}{-0.01in}{0.0in}
+The kernels are a set of routines frequently found in numerical applications:\par
+
+\end{adjustwidth}
+
+\setlength{\parskip}{3.72pt}
+\begin{itemize}
+	\item \textit{fft}: A Fast Fourier Transform of a \textit{2\textsuperscript{19}} element input vector. This is a vectorizable code with strides power of 2.\par
+
+\setlength{\parskip}{3.84pt}
+	\item \textit{mm}: A matrix by matrix multiplication. A vectorizable code with unit and non-unit strides\par
+
+	\item \textit{mmb}: A block algorithm for matrix by matrix multiplication, optimized to make an optimal use of a 16 Kbyte conventional cache.\par
+
+	\item \textit{smv}: A sparse matrix by vector multiplication. A non-vectorizable code.
+\end{itemize}\par
+
+\setlength{\parskip}{8.04pt}
+\textit{tri}: A triangular matrix multiplication\par
+
+{\fontsize{14pt}{16.8pt}\selectfont 3. spec benchmarks \par}The following benchmarks from the SPEC 92 benchmark suite have also been used: \textit{compress, eqntott }and \textit{espresso }(from SPECint92) and \textit{alvinn, hydro2d, mdljdp2, mdljsp2 }and \textit{swm256 }(from SPECfp92). We will refer to them as \textit{com, eqn, esp, alv, hyd, mdd, mds }and \textit{swm }respectively\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=4.67in,height=1.79in]{./media/image1.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+{\fontsize{10pt}{12.0pt}\selectfont For 16 kbyte cache\par}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=4.71in,height=1.28in]{./media/image2.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+{\fontsize{10pt}{12.0pt}\selectfont For 32 Kbyte cache\par}\par
+
+For the \textit{FFT }benchmark, the dual data cache has much better performance than a conventional cache. This benchmark makes vector accesses with strides that are powers of 2\par
+
+\begin{adjustwidth}{-0.01in}{0.0in}
+On the other hand, the dual data cache do not cache those vectors that are going to interfere and then it benefits from the shorter miss penalty due to the shorter line size.\par
+
+\end{adjustwidth}
+
+The dual data cache may have a worse performance than a conventional cache for some memory reference patterns. This happens when almost all memory references exhibit spatial locality. In this case, almost all the data is cached into the spatial cache.\par
+
+In some other cases, the dual data cache is a little bit worse than the conventional cache (\textit{eqntott} always; \textit{alv, mdd }and\textit{ esp }for some configurations). However, it is remarkable the good performance of the selective cache, which is always better than the conventional cache with a very few exceptions.\par
+
+
+\vspace{\baselineskip}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Dual locality caching }\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont we build the DULO scheme by\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont using theLRUalgorithm and its data structure—theLRUstack—as a reference\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont point.\par}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 4.97in		\includegraphics[width=2.53in,height=2.89in]{./media/image3.png}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont In LRU, newly fetched blocks enter into its stack top, and replaced blocks\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont leave from its stack bottom. There are two key operations in the DULO scheme.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont (1) Forming sequences is one of the key operations. A \textit{sequence }is defined as a\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont number of blocks whose disk locations are close to each other and have been\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont accessed continuously without an interruption during a limited time period.\par}\par
+
+
+\vspace{\baselineskip}
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont 2 Sorting sequences in an LRU stack according\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont to their recency (temporal locality) and size (spatial locality) with the objective\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont that sequences of large recency and size are close to the LRU stack bottom.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont Block table is the data structure for implementing dual locality.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont The block table is analogous in structure to the multilevel page\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont table used to process address translation.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont There are three levels in the example block table: two directory levels and one\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont leaf level. The table entries at different levels are fit into different memory pages. An entry at the\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont leaf level is called Block Table Entry (BTE).\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont the block table covers disk space in the unit of block\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont where a logical block number (LBN) of a block is the index into the table.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont In the system, we set a global variable called a \textit{disk access clock}, which ticks\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont each time a block is fetched into memory and stamps the block being fetched\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont with the current clock time . We then record the timestamp in an entry at the\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont leaf-level of the block table, which is determined by the LBN of the block.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont When the sequencing bank is full, it is time to examine blocks in the bank to\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont aggregate them into sequences.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont The DULO algorithm associates each sequence with an attribute \textit{H}, where a relatively small \textit{H }value indicates its associated sequence should be evicted earlier. The algorithm has a global inflation value \textit{L}, which is initiated as 0. When a new sequence \textit{s }is admitted into the eviction section, its \textit{H }value is set as \textit{H}(\textit{s}) = \textit{L }+ 1\textit{/size}(\textit{s}), where \textit{size}(\textit{s}) is the number of the blocks contained in\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \textit{s}. When a sequence is evicted, we assign the \textit{H }value of the sequence to \textit{L}. So \textit{L }records the \textit{H }value of the most recently evicted sequence. The sequences in the eviction section are sorted by their \textit{H }values with sequences of small \textit{H} values at the LRU stack bottom. In the algorithm, a sequence of large size tends to stay at the stack bottom and to be evicted earlier. However, if a sequence of small size is not accessed for a relatively long time, it would be replaced. This is because a newly admitted long sequence could have a larger \textit{H }value due to the \textit{L }value, which keeps being inflated by evicted blocks. When all sequences\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont are random blocks (i.e., their sizes are 1), the algorithm degenerates into the LRU replacement algorithm.\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Evaluation }\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont To demonstrate the performance improvements of DULO on a modern operating\par}\par
+
+\setlength{\parskip}{8.04pt}
+{\fontsize{10pt}{12.0pt}\selectfont system, we implement it in the recent Linux kernel 2.6.11\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont Benchmarks\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont 1.\textit{ TPC-H }is a decision support benchmark that runs business-oriented queries\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont against a database system\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \textit{2. diff }is a tool that compares two files in a character-by-character fashion\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \textit{3. BLAST }(basic local alignment search tool) is software from the National\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont Centre for Biotechnology Information\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 4.\textit{ Postmark }is a benchmark designed by Network Appliance to test performance\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont of systems,\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont 5.\textit{ LXR }(Linux cross-reference) is a widely used source code indexer and crossreferencer\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont [LXR ].\par}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 4 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[H]	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image4.png}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.45\textwidth]{./media/image5.png}
+	\end{subfigure}
+~
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 4 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{8.04pt}
+\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont In Figure 4, the CDF curves show that in workload TPC-H more than 85$\%$  of the sequences are longer than 16 blocks. For this almost-all-sequential workload, DULO has limited influence on the performance. It can slightly increase\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont the sizes of short sequences, and accordingly reduce execution time by 2.1$\%$  with a memory size of 384MB. However, for the almost-all-random workload \textit{diff}, more than 80$\%$  of the sequences are shorter than 4 blocks. Unsurprisingly, DULO cannot create sequential disk requests from application requests consisting of purely random blocks. As expected, we see almost no improvements of execution times by DULO. The other three benchmarks have a considerable amount of both short sequences and long sequences\par}\par
+
+
+\vspace{\baselineskip}
+\setlength{\parskip}{8.04pt}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Results and conclusion :}\par}\par
+
+\setlength{\parskip}{0.0pt}
+The performance figures obtained for a set of benchmarks show that the dual data cache outperforms in many cases a conventional cache. It is even more remarkable the good performance of the selective cache, which consists of an ordinary cache plus a locality prediction table with a very few entries. We have also shown that for those cases where software techniques can be applied to improve the locality of a given\par
+
+algorithm (blocking and copying), the performance of the dual data cache is not degraded For instance, in the case of matrix multiply with blocking and copying, the performance of the dual cache is\par
+
+\setlength{\parskip}{8.04pt}
+about the same as that of a conventional cache .Then we moved to a newly proposed caching technique which is Dual locality caching we identify a serious weakness in spatial locality exploitation in I/O caching and propose a new and effective memory management scheme, DULO, which can significantly improve I/O performance by exploiting both temporal and spatial localities. Our experiment results show that DULO can effectively reorganize applications’ I/O request streams mixed with random and sequential accesses in order to provide a more disk-friendly request stream with high sequentiality of block accesses .We analysed an effective DULO algorithm to carefully trade off random accesses with sequential accesses. The results of performance evaluation on both buffer cache and virtual memory systems show that DULO can significantly improve a system’s I/O performance\par
+
+
+\vspace{\baselineskip}
+
+\printbibliography
+\end{document}
