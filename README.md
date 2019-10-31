@@ -1,2 +1,5 @@
-# research_project
-project on evaluating caches through multiple caching techniques
+# TITLE:
+Evaluating caches with multiple caching strategies
+# ABSTRACT:
+Current data cache organizations fail to deliver high performance in scalar processors for many vector applications. There are two main reasons for this loss of performance: the use of the same organization for caching both spatial and temporal locality and the “eager” caching policy used by caches. The first issue has led to the well-known trade-off of designing caches with a line size of a few tens of bytes. However, for memory reference patterns with low spatial locality a significant pollution is introduced. On the other hand, when the spatial locality is very high, larger lines could be more convenient. The eager caching policy refers to the fact that data that miss in the cache and is required by the processor is always cached (excepting writes in a no write allocate cache). However, it is common in numerical applications to have large working sets (large vectors, larger than the cache size), that result on a swept of the cache without any opportunity to exploit temporal locality. In addition, they replace some other data that may be required later.
+In this project we look at and compare all the caching types and discuss their benefits and losses and also discuss alternative caching strategies overcoming aforementioned disadvantages.
